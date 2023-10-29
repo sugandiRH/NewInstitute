@@ -1,0 +1,13 @@
+.container form {
+    min-height: 650px;
+}
+
+
+form .fields .input-field {
+    width: calc(100% / 3 - 15px);
+}
+
+form .fields .error-field p{
+    font-size: 11px;
+    color: brown;
+}

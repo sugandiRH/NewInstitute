@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Josefin+Sans&family=Poppins:wght@200;300;400;500;600;700;800&family=Rubik:wght@300;400;600;700&display=swap');
+
+:root{
+    --green : #00e7db;
+    --white : #ffffff;
+    --light-white : #cbe2f2;
+    --black : #b3fb9c;
+    --light-bg : hsl(194, 96%, 47%);
+}
+
+*,
+::before, 
+::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body,input{
+    font-family: 'Rubik', sans-serif;
+}
+
+main{
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--white);
+    overflow: hidden;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box{
+    position: relative;
+    width: 100%;
+    max-width: 1020px;
+    height: 640px;
+    background-color: var(--light-bg);
+    border-radius: 3.3rem;
+    box-shadow: 0 60px 40px -30px rgba(0, 0, 0, 0.27);
+}
+
+.inner-box{
+    position: absolute;
+    width: calc(100% - 4.1rem);
+    height: calc(100% - 4.1rem);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+
+.forms-wrap{
+    position: absolute;
+    height: 100%;
+    width: 45%;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    transition: .8s ease-in-out;
+}
+
+form{
+    max-width: 260px;
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    grid-column: 1 / 2;
+    grid-row: 1/ 2;
+    transition: opacity 0.02s 0.4s;
+}
+
+form.sign-in-form{
+    opacity: 1;
+    pointer-events: all;
+}
+
+form.sign-up-form{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.heading h2{
+    font-size: 2.1rem;
+    font-weight: 600;
+    color: var(--white);
+}
+
+.heading h6{
+    color: var(--green);
+    font-weight: 400;
+    font-size: 0.75rem;
+    display: inline;
+}
+
+.toggle{
+    color: var(--black);
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.toggle:hover{
+    color: var(--light-white);
+}
+
+.input-wrap{
+    position: relative;
+    height: 37px;
+    margin-bottom: 2rem;
+}
+
+.infut-field{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: none;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--light-white);
+    padding: 0;
+    font-size: 0.95rem;
+    color: var(--black);
+    transition: 0.4s;
+}
+
+label{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: .95rem;
+    color: var(--light-bg);
+    pointer-events: none;
+    transition: 0.4s;
+    color: var(--light-white);
+}
+
+.infut-field.active{
+    border-bottom-color: var(--black);
+}
+
+.infut-field.active + label{
+    font-size: .75rem;
+    top: -5px;
+}
+
+.sign-btn{
+    display: inline-block;
+    width: 100%;
+    height: 43px;
+    background-color: var(--black);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    border-radius: 0.8rem;
+    font-size: 0.8rem;
+    margin-bottom: 2rem;
+    transition: 0.3s;
+} 
+
+.sign-btn:hover {
+    background-color: var(--light-white);
+}
+
+main.sign-up-mode form.sign-in-form {
+    opacity: 0;
+    pointer-events: none;
+}
+
+main.sign-up-mode form.sign-up-form {
+    opacity: 1;
+    pointer-events: all;
+}
+
+main.sign-up-mode .forms-wrap {
+    left: 55%;
+}
+
+main.sign-up-mode .carousel {
+    left: 0%;
+}
+
+.carousel{
+    position: absolute;
+    height: 100%;
+    width: 55%;
+    left: 45%;
+    top: 0;
+    transition: .8s ease-in-out;
+    background-color: var(--light-white);
+    border-radius: 2rem;
+    padding-bottom: 5rem;
+    display: grid;
+    grid-template-rows: auto 5fr;
+}
+
+
+@media (max-width: 850px) {
+    .box{
+        height: auto;
+        max-width: 550px;
+        overflow: hidden;
+    }
+
+    .inner-box{
+        position: static;
+        transform: none;
+        width: revert;
+        height: revert;
+        padding: 2rem;
+    }
+
+    .forms-wrap{
+        position: revert;
+        width: 100%;
+        height: auto;
+    }
+
+    .carousel{
+        position: revert;
+        height: auto;
+        width: 100%;
+        padding: 3rem 2rem;
+        display: flex;
+    }
+
+    .images-wrapper{
+        display: none;
+    }
+
+    form{
+        position: revert;
+        width: 100%;
+        height: auto;
+        transition: transform 0.8s ease-in-out, opcity 0.45s linear;
+    }
+
+    form.sign-up-form {
+        transform: translateX(100%);
+    }
+
+    main.sign-up-mode form.sign-in-form {
+        transform: translateX(-100%);
+    }
+
+    main.sign-up-mode form.sign-up-form {
+        transform: translateX(0%);
+    }
+}

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Admin home page</title>
+
+   <!--cdn link-->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" charset="UTF-8"></script>
+
+    <!--font awesome cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    
+    <!--custom css file link-->
+    <link rel="stylesheet" href="dashboard.css">
+
+</head>
+<body>
+   
+   <!--wrapper start-->
+
+   <div class="wrapper">
+
+      <!--header start-->
+
+      <div class="header">
+
+         <div class="header-menu">
+            <div class="title">New <span>Sipma</span></div>
+
+            <div class="sidebar-btn">
+               <i class="fas fa-bars"></i>
+            </div>
+
+            <ul>
+               <li><a href="/newInstitute/loginPage/login.html"><i class="fas fa-power-off"></i></a></li>
+            </ul>
+
+         </div>
+      </div>
+
+      <!--header end-->
+
+      <!--siderbar start-->
+
+      <div class="sidebar">
+
+         <div class="sidebar-menu">
+            <center class="prfile">
+               <img src="image/admin3.png" alt="">
+               <p>Admin</p>
+            </center>
+
+            <li class="item">
+ 
+               <a href="#" class="menu-btn">
+                  <i class="fas fa-desktop"></i>
+                  <span>Dashboard</span>
+               </a>
+
+            </li>
+
+            <!--for student start-->
+            <li class="item" id="Student">
+
+               <a href="#Student" class="menu-btn">
+                  <i class="fas fa-sharp fa-regular fa-graduation-cap"></i>
+                  <span>Student <i class="fas fa-chevron-down drop-dowm"></i></span>
+               </a>
+
+               <div class="sub-menu">
+                  <a href="#"><i class="fa-solid fa-user-plus"></i><span>Add New</span></a>
+                  <a href="#"><i class="fa-light fa-list-dropdown"></i><span>Veiw Student Info</span></a>
+                  <a href="#"><i class="fa-light fa-list-dropdown"></i><span>Class Fees</span></a>
+               </div>
+
+            </li>
+            <!--for student end-->
+
+            <!--for teacher start-->
+            <li class="item" id="teacher">
+
+               <a href="#teacher" class="menu-btn">
+                  <i class="fas fa-sharp fa-regular fa-graduation-cap"></i>
+                  <span>Teacher <i class="fas fa-chevron-down drop-dowm"></i></span>
+               </a>
+
+               <div class="sub-menu">
+                  <a href="b.html"><i class="fa-solid fa-user-plus"></i><span>Add New</span></a>
+                  <a href="#"><i class="fa-light fa-list-dropdown"></i><span>Veiw Teacher Info</span></a>
+               </div>
+
+            </li>
+            <!--for teacher end-->
+
+            <!--for admin start-->
+            <li class="item" id="admin">
+
+               <a href="#admin" class="menu-btn">
+                  <i class="fas fa-sharp fa-regular fa-graduation-cap"></i>
+                  <span>Admin <i class="fas fa-chevron-down drop-dowm"></i></span>
+               </a>
+
+               <div class="sub-menu">
+                  <a href="login.html"><i class="fa-solid fa-user-plus"></i><span>Add New</span></a>
+                  <a href="#"><i class="fa-light fa-list-dropdown"></i><span>Veiw Admin Info</span></a>
+               </div>
+
+            </li>
+            <!--for admin end-->
+
+            <!--for class start-->
+            <li class="item" id="class">
+
+               <a href="#class" class="menu-btn">
+                  <i class="fas fa-sharp fa-regular fa-graduation-cap"></i>
+                  <span>Class <i class="fas fa-chevron-down drop-dowm"></i></span>
+               </a>
+
+               <div class="sub-menu">
+                  <a href="#"><i class="fa-solid fa-user-plus"></i><span>Add New</span></a>
+                  <a href="#"><i class="fa-light fa-list-dropdown"></i><span>Veiw Class Info</span></a>
+               </div>
+
+            </li>
+            <!--for class end-->
+
+         </div>
+
+      </div>
+
+      <!--siderbar end-->
+
+      <!--main container start-->
+
+      <div class="main-container">
+         <div class="logo">
+            <div class="image"><img src="image/logo.png" alt=""></div>
+         </div>
+      </div>
+
+      <!--main container end-->
+
+   </div>
+
+   <!--wrapper end-->
+
+
+
+
+   <!--js-->
+   <script>
+
+      $(document).ready(function(){
+         $(".sidebar-btn").click(function () {
+            $(".wrapper").toggleClass("collapse");
+         });
+      });
+
+   </script>
+
+</body>
+</html>

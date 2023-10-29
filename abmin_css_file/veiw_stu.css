@@ -1,0 +1,15 @@
+.table-box{
+    width: 1400px;
+}
+
+tr td:nth-child(8){
+    text-align: center;
+}
+
+tr th:nth-child(1){
+    width: 150px;
+}
+
+.search{
+    margin: 40px;
+}

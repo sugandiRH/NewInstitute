@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+
+    <!--link css file-->
+    <link rel="stylesheet" href="login.css">
+
+</head>
+<body>
+
+    <main>
+        <div class="box">
+            <div class="inner-box">
+
+                <div class="forms-wrap">
+
+                    <form action="login.php" autocomplete="off" class="sign-in-form" method="post">
+
+                        <div class="heading">
+                            <h2>Welcome Back</h2>
+                            <h6>not registered?</h6>
+                            <a href="#" class="toggle">Sign Up</a>
+                        </div>
+
+                        <div class="actual-form">
+
+                            <div class="input-wrap">
+                                <input type="text"
+                                class="infut-field"
+                                autocomplete="off"
+                                name = "userName"
+                                required>
+                                <label>User Name</label>
+                            </div>
+
+                            <div class="input-wrap">
+                                <input type="password"
+                                minlength="8"
+                                class="infut-field"
+                                autocomplete="off"
+                                name = "password"
+                                required>
+                                <label>Password</label>
+                            </div>
+
+                            <input type="submit"
+                            value="Submit"
+                            class="sign-btn"
+                            name = "loginbtn"/>
+
+                        </div>
+
+                    </form>
+
+                    <form action="RegisterForm.html" autocomplete="off" class="sign-up-form" name="loginForm" method="post">
+
+                        <div class="heading">
+                            <h2>Get Started</h2>
+                            <h6>Already have an account?</h6>
+                            <a href="#" class="toggle">Sign In</a>
+                        </div>
+
+                        <div class="actual-form">
+
+                            <div class="input-wrap">
+                                <input type="text"
+                                class="infut-field"
+                                autocomplete="off"
+                                name = "userName"
+                                required>
+                                <label> User Name</label>
+                            </div>
+
+                            <div class="input-wrap">
+                                <input type="email"
+                                maxlength="50"
+                                class="infut-field"
+                                autocomplete="off"
+                                name = "email"
+                                required>
+                                <label>email</label>
+                            </div>
+
+                            <div class="input-wrap">
+                                <input type="text"
+                                minlength="10"
+                                class="infut-field"
+                                autocomplete="off"
+                                name = "password"
+                                required>
+                                <label>Password</label>
+                            </div>
+
+                            <div class="input-wrap">
+                                <input 
+                                type="password"
+                                minlength="10"
+                                class="infut-field"
+                                autocomplete="off"
+                                name = "conpw"
+                                required>
+                                <label>Conform Password</label>
+                            </div>                   
+
+                            <input type="submit"
+                            value="Sign up"
+                            class="sign-btn"
+                            name = "registerBtn"/>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+                <div class="carousel">
+                    <div class="images-wrapper">
+                        <img src="img/course1.svg" alt="">
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+
+
+
+    <!--link js file--> 
+    <script src="login.js"></script>
+    
+</body>
+</html>

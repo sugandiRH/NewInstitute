@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DashBord</title>
+    <link rel="stylesheet" href="dash.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
+</head>
+<body>
+
+    <!--header start-->
+
+    <div class="header">
+
+        <div class="header-menu">
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+           </div>
+           <div class="title">New <span>Sipma</span></div>
+
+           <ul>
+              <li><a href="/newInstitute/loginPage/login.html"><i class="fas fa-power-off"></i></a></li>
+           </ul>
+
+        </div>
+     </div>
+
+     <!--header end-->
+
+        <div class="side-bar">
+
+            <div class="close-btn">
+                <i class="fas fa-times"></i>
+            </div>
+
+            <div class="menu">
+                <div class="item"><a href="#"><i class="fas fa-desktop"></i>Dashbord</a></div>
+
+                <div class="item">
+                    <a class="sub-btn"><i class="fa-solid fa-graduation-cap"></i>Student<i class="fas fa-angle-right dropdown"></i></a>
+                    <div class="sub-menu">
+                        <a href="/newInstitute/abmin_html_file/add_new_stu.php" class="sub-item">Add New Student</a>
+                        <a href="/newInstitute/abmin_html_file/veiw_student.php" class="sub-item">Veiw Student</a>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <a class="sub-btn"><i class="fa-solid fa-chalkboard-user"></i>Teacher<i class="fas fa-angle-right dropdown"></i></a>
+                    <div class="sub-menu">
+                        <a href="/newInstitute/abmin_html_file/add_new_teacher.php" class="sub-item">Add New Teacher</a>
+                        <a href="/newInstitute/abmin_html_file/veiw_teacher.php" class="sub-item">Veiw Teacher</a>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <a class="sub-btn"><i class="fa-solid fa-school"></i>Courses<i class="fas fa-angle-right dropdown"></i></a>
+                    <div class="sub-menu">
+                        <a href="/newInstitute/abmin_html_file/add_new_clas.php" class="sub-item">Add New Courses</a>
+                        <a href="/newInstitute/abmin_html_file/veiw_class.php" class="sub-item">Veiw Courses</a>
+                    </div>
+                </div> 
+
+                <div class="item"><a href="/newInstitute/abmin_html_file/mark_Attend.php"><i class="fa-solid fa-clipboard-user"></i>Mark Attent</a></div>
+            </div>
+        </div>
+
+    <section class="main">
+
+    </section>
+
+    <script>
+        $(document).ready(function(){
+            //jquery for toggle sub menu
+            $('.sub-btn').click(function(){
+                $(this).next('.sub-menu').slideToggle();
+                $(this).find('.dropdown').toggleClass('rotate');
+            });
+
+            //jquery for expand and collaspse the sidebar
+            $('.menu-btn').click(function(){
+                $('.side-bar').addClass('active');
+            });
+
+            $('.close-btn').click(function(){
+                $('.side-bar').removeClass('active');
+            });
+        });
+    </script>
+
+</body>
+</html>

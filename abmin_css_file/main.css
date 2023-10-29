@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Josefin+Sans&family=Poppins:wght@200;300;400;500;600;700;800&family=Rubik:wght@300;400;600;700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    background: #fff;
+}
+
+.container{
+    top: 60px;
+    left: 250px;
+    position: relative;
+    max-width: 1000px;
+    width: 100%;
+    border-radius: 6px;
+    padding: 30px;
+    margin: 0 15px ;
+    background-color: white;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container header{
+    position: relative;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+}
+
+.container header::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 3px;
+    width: 27px;
+    border-radius: 8px;
+    background-color: aqua;
+}
+
+.container form {
+    position: relative;
+    margin-top: 16px;
+    background-color: #fff;
+}
+
+.container form .form {
+    position: absolute;
+    background-color: #fff;
+}
+
+.container form .title {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 6px 0;
+    color: #333;
+}
+
+.container form .fields {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+form .fields .input-field {
+    display: flex;
+    flex-direction: column;
+    margin: 4px 0;
+}
+
+.input-field label {
+    font-size: 12px;
+    font-weight: 500;
+    color: #2e2e2e;
+}
+
+.input-field input {
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    padding: 0 15px;
+    height: 35px;
+    margin: 8px 0;
+}
+
+.input-field .select-box{
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    padding: 0 15px;
+    height: 35px;
+    margin: 8px 0;
+}
+
+/*for check box*/
+
+.input-field .checktime{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    max-width: 350px;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.checktime .check {
+    transform: scale(2);
+    margin-right: 10px;
+    margin-left: 18px;
+}
+
+.checktime .chtext{
+    font-size: 12px;
+}
+
+/* for error message
+
+.input-field .error {
+    display: flex;
+    align-items: center;
+    margin-top: 6px;
+    color: var(--error);
+    font-size: 13px;
+    display: none;
+}
+
+.error .error-icon {
+    margin: 6px;
+    font-size: 16px;
+}
+
+error end*/
+
+.container form button, .clearBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    max-width: 200px;
+    width: 100%;
+    border: none;
+    outline: none;
+    color: #fff;
+    border-radius: 5px;
+    margin: 25px 0;
+    background-color: #4070f4;
+    transition: all 0.3s linear;
+    cursor: pointer;
+}
+
+.container form button,
+.container form .clearBtn {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+form button:hover{
+    background-color: rgb(17, 77, 207);
+}
+
+form .buttons {
+    display: flex;
+    align-items: center;
+}
+
+form button i {
+    margin: 0 6px;
+}
+
+form .buttons button , .clearBtn {
+    margin-right: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
